@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucky Raj | BCA Student & Software Developer | Video Editor</title>
+  <meta name="description" content="Portfolio of Lucky Raj - BCA student at SAGE University, Indore. Software developer (C, Python, Java, SQL, Web) & Digital Content Creator (Premiere Pro, DaVinci Resolve, After Effects).">
+  <meta name="keywords" content="Lucky Raj, RajExploit, SAGE University, BCA Indore, Software Developer, Video Editor, DaVinci Resolve, Python, Java, Cisco Networking">
+  <meta name="author" content="Lucky Raj">
+  
+  <!-- OpenGraph Social Sharing -->
+  <meta property="og:title" content="Lucky Raj | Developer & Creative Video Editor">
+  <meta property="og:description" content="BCA Student at SAGE University Indore, bridging computer software engineering with cinematic digital storytelling.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/lucky_avatar.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<text y=%2226%22 font-size=%2224%22>⚡</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Ambient Background Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Audio click synthesis status -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Lucky Raj Home">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">LuckyRaj</span>
+        <span class="logo-tag">/</span>
+        <span class="logo-bracket">&gt;</span>
+        <span class="pulse-dot" title="Active"></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link"><i class="fa-regular fa-user"></i> About</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+        <a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+        <a href="#terminal" class="nav-link"><i class="fa-solid fa-terminal"></i> Terminal</a>
+        <a href="#contact" class="nav-link"><i class="fa-regular fa-paper-plane"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="soundToggle" class="icon-btn" aria-label="Toggle sound effects" title="Toggle Sound FX">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle color theme" title="Toggle Light/Dark Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="resumeModalBtn" class="btn btn-outline btn-sm">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Resume CV</span>
+        </button>
+        <button id="mobileMenuBtn" class="mobile-toggle icon-btn" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-indicator"></span>
+            <span class="status-text">BCA '28 @ SAGE University &bull; Available for Opportunities</span>
+            <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Indore, MP</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="greeting-sub">Hello, World! I am</span>
+            <span class="name-highlight">LUCKY RAJ</span>
+            <span class="hero-role-wrapper">
+              <span class="hero-role-prefix">&gt; </span>
+              <span id="typingRole" class="typing-text">Software Developer</span>
+              <span class="cursor-caret">|</span>
+            </span>
+          </h1>
+
+          <p class="hero-description">
+            BCA Scholar at <strong>SAGE University, Indore</strong> with a dual passion for building solid software foundations (C, Python, Java, SQL, Web) and crafting high-impact cinematic visual stories with <strong>Premiere Pro, DaVinci Resolve & After Effects</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#terminal" class="btn btn-glass">
+              <i class="fa-solid fa-terminal"></i>
+              <span>Open Terminal</span>
+            </a>
+            <a href="https://github.com/RajExploit" target="_blank" rel="noopener noreferrer" class="btn btn-dark-subtle" title="Visit RajExploit GitHub">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <div class="hero-quick-stats">
+            <div class="quick-stat-item">
+              <span class="stat-number">BCA</span>
+              <span class="stat-label">SAGE Univ '25-28</span>
+            </div>
+            <div class="quick-stat-divider"></div>
+            <div class="quick-stat-item">
+              <span class="stat-number">Cisco</span>
+              <span class="stat-label">Networking Basics</span>
+            </div>
+            <div class="quick-stat-divider"></div>
+            <div class="quick-stat-item">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Pro Video Suites</span>
+            </div>
+            <div class="quick-stat-divider"></div>
+            <div class="quick-stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Code Technologies</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-frame">
+              <img src="assets/lucky_avatar.jpg" alt="Lucky Raj - Software Developer & Video Editor" class="avatar-img" width="460" height="460">
+              <div class="avatar-overlay-badge badge-top-right">
+                <i class="fa-solid fa-code"></i>
+                <span>C / Py / Java</span>
+              </div>
+              <div class="avatar-overlay-badge badge-bottom-left">
+                <i class="fa-solid fa-film"></i>
+                <span>Premiere & DaVinci</span>
+              </div>
+            </div>
+            <div class="avatar-caption-card">
+              <div class="caption-header">
+                <span class="caption-dot green"></span>
+                <span class="caption-user">@RajExploit</span>
+                <span class="caption-badge">Developer &amp; Creator</span>
+              </div>
+              <p class="caption-text">"Turning logic into code, and vision into cinematic frame sequences."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-down-indicator">
+        <a href="#about" aria-label="Scroll down to About section">
+          <span class="mouse-icon">
+            <span class="wheel"></span>
+          </span>
+          <span class="scroll-text">Scroll to explore</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-id-badge"></i> WHO I AM</div>
+          <h2 class="section-title">Driven by Logic. Inspired by Creativity.</h2>
+          <p class="section-subtitle">
+            A comprehensive look at my background, aspirations, and dual-track expertise in modern technology.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Summary Card -->
+          <div class="about-card main-summary-card">
+            <div class="card-icon-bubble">
+              <i class="fa-solid fa-sparkles"></i>
+            </div>
+            <h3 class="card-title">Professional Summary</h3>
+            <p class="card-text">
+              I am currently pursuing my <strong>Bachelor of Computer Applications (BCA)</strong> at <strong>SAGE University, Indore</strong> (2025–2028). Passionate about software development, systems programming, web technologies, networking, and digital content creation.
+            </p>
+            <p class="card-text">
+              My daily focus revolves around building practical coding skills through structured problem-solving, real academic projects, and hands-on laboratory exercises. I am proactively looking for internship opportunities where I can learn from industry mentors, contribute meaningful code, and accelerate my professional journey.
+            </p>
+
+            <div class="about-details-list">
+              <div class="detail-row">
+                <span class="detail-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                <span class="detail-value">
+                  <a href="mailto:lucky909792@gmail.com" class="link-highlight">lucky909792@gmail.com</a>
+                  <button class="copy-pill-btn" onclick="copyToClipboard('lucky909792@gmail.com', 'Email copied!')" title="Copy email">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label"><i class="fa-solid fa-phone"></i> Phone:</span>
+                <span class="detail-value">
+                  <a href="tel:+917870856510" class="link-highlight">+91 7870856510</a>
+                  <button class="copy-pill-btn" onclick="copyToClipboard('+917870856510', 'Phone number copied!')" title="Copy phone">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label"><i class="fa-brands fa-github"></i> GitHub:</span>
+                <span class="detail-value">
+                  <a href="https://github.com/RajExploit" target="_blank" rel="noopener" class="link-highlight">github.com/RajExploit</a>
+                </span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label"><i class="fa-solid fa-location-pin"></i> Base:</span>
+                <span class="detail-value">Indore, Madhya Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Track Persona Columns -->
+          <div class="about-card persona-card dev-persona">
+            <div class="persona-header">
+              <div class="persona-icon dev-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div>
+                <span class="persona-tag">TRACK 01</span>
+                <h4 class="persona-heading">The Software Developer</h4>
+              </div>
+            </div>
+            <p class="persona-desc">
+              Strong computational foundations built around C, Python, Java, SQL, and modern web protocols. Focused on understanding computer architecture, memory allocation, and data flow.
+            </p>
+            <ul class="persona-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>C & Java:</strong> Object-Oriented design, memory safety, academic coding rigor</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Python:</strong> Scripting, automation, data handling, and algorithmic exercises</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Web & SQL:</strong> Responsive web structure (HTML/CSS/JS) and relational database queries</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Networking:</strong> Cisco certified in foundational routing, switching, and OSI model</li>
+            </ul>
+          </div>
+
+          <div class="about-card persona-card creative-persona">
+            <div class="persona-header">
+              <div class="persona-icon creative-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <div>
+                <span class="persona-tag">TRACK 02</span>
+                <h4 class="persona-heading">The Digital Creator</h4>
+              </div>
+            </div>
+            <p class="persona-desc">
+              Hands-on experience in visual narrative rhythm, seamless dynamic editing, cinematic color grading, and motion graphics design across industry-standard suites.
+            </p>
+            <ul class="persona-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Adobe Premiere Pro:</strong> Multi-cam editing, audio leveling, narrative timing</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>DaVinci Resolve:</strong> Node-based color grading, LUT application, Fairlight audio</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Adobe After Effects:</strong> Kinetic typography, lower thirds, visual compositing</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>CapCut:</strong> Viral short-form video pacing, TikTok/Reels optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Languages & Core Strengths Bar -->
+        <div class="strengths-banner">
+          <div class="strength-box">
+            <i class="fa-solid fa-language"></i>
+            <div>
+              <h5>English</h5>
+              <span>Advanced Proficiency</span>
+            </div>
+          </div>
+          <div class="strength-box">
+            <i class="fa-solid fa-comments"></i>
+            <div>
+              <h5>Hindi</h5>
+              <span>Advanced Proficiency (Native)</span>
+            </div>
+          </div>
+          <div class="strength-box">
+            <i class="fa-solid fa-certificate"></i>
+            <div>
+              <h5>Cisco Academy</h5>
+              <span>Networking Basics Certified</span>
+            </div>
+          </div>
+          <div class="strength-box">
+            <i class="fa-solid fa-cubes"></i>
+            <div>
+              <h5>Sunstone</h5>
+              <span>Blockchain Workshop Credential</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX -->
+    <section id="skills" class="section skills-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-bolt"></i> CAPABILITIES</div>
+          <h2 class="section-title">Technical &amp; Creative Toolbelt</h2>
+          <p class="section-subtitle">
+            Filter through my programming languages, frameworks, system tools, and multimedia editing software.
+          </p>
+
+          <div class="filter-btn-group" id="skillFilters">
+            <button class="filter-btn active" data-filter="all">All Skills</button>
+            <button class="filter-btn" data-filter="dev">Programming &amp; Web</button>
+            <button class="filter-btn" data-filter="creative">Creative &amp; Video</button>
+            <button class="filter-btn" data-filter="tools">Systems &amp; Tools</button>
+          </div>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- C Programming -->
+          <div class="skill-card" data-category="dev">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap c-color">
+                <i class="fa-solid fa-c"></i>
+              </div>
+              <span class="skill-tag">Language</span>
+            </div>
+            <h3 class="skill-name">C Programming</h3>
+            <p class="skill-desc">Memory management, pointers, structures, and algorithmic logic through BCA coursework.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 85%;"></div>
+            </div>
+            <span class="skill-level">Core Academic Mastery</span>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-card" data-category="dev">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap py-color">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <span class="skill-tag">Language</span>
+            </div>
+            <h3 class="skill-name">Python</h3>
+            <p class="skill-desc">Data structures, automation scripts, scripting logic, and procedural/OOP coding.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 82%;"></div>
+            </div>
+            <span class="skill-level">Practiced &amp; Versatile</span>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card" data-category="dev">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap java-color">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <span class="skill-tag">Language</span>
+            </div>
+            <h3 class="skill-name">Java</h3>
+            <p class="skill-desc">Object-Oriented Programming (OOP), encapsulation, inheritance, polymorphism, and classes.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 78%;"></div>
+            </div>
+            <span class="skill-level">Object-Oriented Core</span>
+          </div>
+
+          <!-- HTML & CSS -->
+          <div class="skill-card" data-category="dev">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap web-color">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <span class="skill-tag">Frontend</span>
+            </div>
+            <h3 class="skill-name">HTML5 &amp; CSS3</h3>
+            <p class="skill-desc">Semantic structure, modern Flexbox, CSS Grid layouts, glassmorphism, responsive UI design.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 90%;"></div>
+            </div>
+            <span class="skill-level">Modern Web Standards</span>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card" data-category="dev">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap js-color">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <span class="skill-tag">Frontend</span>
+            </div>
+            <h3 class="skill-name">JavaScript</h3>
+            <p class="skill-desc">DOM manipulation, ES6+ syntax, asynchronous events, interactive animations, and state handling.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 80%;"></div>
+            </div>
+            <span class="skill-level">Dynamic Web Logic</span>
+          </div>
+
+          <!-- SQL -->
+          <div class="skill-card" data-category="dev">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap sql-color">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <span class="skill-tag">Database</span>
+            </div>
+            <h3 class="skill-name">SQL (Databases)</h3>
+            <p class="skill-desc">Relational database design, table queries, joins, filtering, and normalization principles.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 80%;"></div>
+            </div>
+            <span class="skill-level">Relational Systems</span>
+          </div>
+
+          <!-- Adobe Premiere Pro -->
+          <div class="skill-card" data-category="creative">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap prem-color">
+                <span class="adobe-pill">Pr</span>
+              </div>
+              <span class="skill-tag">Video Suite</span>
+            </div>
+            <h3 class="skill-name">Adobe Premiere Pro</h3>
+            <p class="skill-desc">Non-linear editing, multi-track cutting, audio mastering, narrative flow, and high-def exports.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 88%;"></div>
+            </div>
+            <span class="skill-level">Hands-on Production</span>
+          </div>
+
+          <!-- After Effects -->
+          <div class="skill-card" data-category="creative">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap ae-color">
+                <span class="adobe-pill">Ae</span>
+              </div>
+              <span class="skill-tag">Motion FX</span>
+            </div>
+            <h3 class="skill-name">Adobe After Effects</h3>
+            <p class="skill-desc">Motion graphics, kinetic titles, keyframing, VFX compositing, and visual transitions.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 82%;"></div>
+            </div>
+            <span class="skill-level">Motion Design</span>
+          </div>
+
+          <!-- DaVinci Resolve -->
+          <div class="skill-card" data-category="creative">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap davinci-color">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <span class="skill-tag">Color &amp; Cut</span>
+            </div>
+            <h3 class="skill-name">DaVinci Resolve</h3>
+            <p class="skill-desc">Node-based professional color grading, color space transforms, and Fairlight audio enhancement.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 85%;"></div>
+            </div>
+            <span class="skill-level">Cinematic Grading</span>
+          </div>
+
+          <!-- CapCut -->
+          <div class="skill-card" data-category="creative">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap capcut-color">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <span class="skill-tag">Social Media</span>
+            </div>
+            <h3 class="skill-name">CapCut Video</h3>
+            <p class="skill-desc">Short-form vertical content, high-retention cuts, auto-captions, and viral social pacing.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 90%;"></div>
+            </div>
+            <span class="skill-level">Viral Content Pacing</span>
+          </div>
+
+          <!-- Networking Basics -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap net-color">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <span class="skill-tag">Cisco Certified</span>
+            </div>
+            <h3 class="skill-name">Networking Basics</h3>
+            <p class="skill-desc">OSI model, IP addressing, TCP/UDP, routers, switches, and network communication fundamentals.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 84%;"></div>
+            </div>
+            <span class="skill-level">Cisco Academy Certified</span>
+          </div>
+
+          <!-- VS Code & Git -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap vscode-color">
+                <i class="fa-solid fa-code-branch"></i>
+              </div>
+              <span class="skill-tag">IDE &amp; Tools</span>
+            </div>
+            <h3 class="skill-name">VS Code &amp; Versioning</h3>
+            <p class="skill-desc">Debugging workflow, extensions, terminal integration, Git version control, and GitHub sync.</p>
+            <div class="skill-meter">
+              <div class="meter-bar" style="width: 88%;"></div>
+            </div>
+            <span class="skill-level">Daily Workflow Essential</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SHOWCASE -->
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-diagram-project"></i> FEATURED WORK</div>
+          <h2 class="section-title">Hands-On Practice &amp; Creations</h2>
+          <p class="section-subtitle">
+            Explore my software development laboratory exercises, web platforms, and creative multimedia projects.
+          </p>
+
+          <div class="filter-btn-group" id="projectFilters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="code">Code &amp; Software</button>
+            <button class="filter-btn" data-filter="media">Video &amp; Content</button>
+            <button class="filter-btn" data-filter="network">Networking &amp; Systems</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1: Programming Practice Suite -->
+          <div class="project-card" data-category="code">
+            <div class="project-thumb-container">
+              <img src="assets/project_code_dev.jpg" alt="Programming Practice Suite" class="project-thumb" loading="lazy">
+              <div class="project-badge">Software Development</div>
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-preview-btn" onclick="openProjectModal('code-suite')">
+                  <i class="fa-solid fa-eye"></i> View Deep-Dive
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-tags">
+                <span class="tag">C</span>
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Web</span>
+              </div>
+              <h3 class="project-title">Fullstack Programming Practice &amp; Lab Suite</h3>
+              <p class="project-desc">
+                Hands-on practical repository covering core algorithms, database schema implementations in SQL, OOP paradigms in Java, Python scripting, and web interfaces.
+              </p>
+              <div class="project-footer">
+                <a href="https://github.com/RajExploit" target="_blank" rel="noopener" class="project-link">
+                  <i class="fa-brands fa-github"></i> github.com/RajExploit
+                </a>
+                <button class="btn-text" onclick="openProjectModal('code-suite')">
+                  Explore <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Video Editing & Digital Content -->
+          <div class="project-card" data-category="media">
+            <div class="project-thumb-container">
+              <img src="assets/project_video_reel.jpg" alt="Video Editing and Digital Content Creation" class="project-thumb" loading="lazy">
+              <div class="project-badge video-badge">Cinematic Video &amp; VFX</div>
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-preview-btn" onclick="openProjectModal('video-suite')">
+                  <i class="fa-solid fa-play"></i> Watch Breakdown
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-tags">
+                <span class="tag">Premiere Pro</span>
+                <span class="tag">After Effects</span>
+                <span class="tag">DaVinci Resolve</span>
+                <span class="tag">CapCut</span>
+              </div>
+              <h3 class="project-title">Cinematic Video Editing &amp; Digital Content Showcase</h3>
+              <p class="project-desc">
+                High-energy visual pacing, narrative cut sequences, custom motion typography, node-based color grading, and short-form vertical video optimization.
+              </p>
+              <div class="project-footer">
+                <span class="project-status-tag"><i class="fa-solid fa-film"></i> 4K Workflow &amp; Grading</span>
+                <button class="btn-text" onclick="openProjectModal('video-suite')">
+                  Breakdown <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Cisco Networking Basics Lab -->
+          <div class="project-card" data-category="network">
+            <div class="project-thumb-container">
+              <img src="assets/project_network.jpg" alt="Cisco Networking Topology & Lab" class="project-thumb" loading="lazy">
+              <div class="project-badge network-badge">Cisco Academy Certified</div>
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-preview-btn" onclick="openProjectModal('network-lab')">
+                  <i class="fa-solid fa-network-wired"></i> View Topology
+                </button>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta-tags">
+                <span class="tag">Cisco Packet Tracer</span>
+                <span class="tag">IPv4 / Subnetting</span>
+                <span class="tag">Routing</span>
+                <span class="tag">Switching</span>
+              </div>
+              <h3 class="project-title">Enterprise Network Architecture &amp; Packet Analysis</h3>
+              <p class="project-desc">
+                Practical simulation of enterprise LAN topologies, VLAN segmentations, IP addressing schemes, and troubleshooting packet flow verified through Cisco Networking Academy.
+              </p>
+              <div class="project-footer">
+                <span class="project-status-tag"><i class="fa-solid fa-shield-halved"></i> Certified Credential</span>
+                <button class="btn-text" onclick="openProjectModal('network-lab')">
+                  Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TERMINAL -->
+    <section id="terminal" class="section terminal-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-terminal"></i> CLI SIMULATOR</div>
+          <h2 class="section-title">Developer Interactive Console</h2>
+          <p class="section-subtitle">
+            Type commands or click quick action buttons below to interrogate my background, skills, and contact data.
+          </p>
+        </div>
+
+        <div class="terminal-window">
+          <div class="terminal-titlebar">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">rajexploit@portfolio: ~ (zsh)</div>
+            <div class="terminal-actions">
+              <button class="term-action-btn" onclick="clearTerminal()" title="Clear terminal">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="terminal-body" id="terminalOutput">
+            <div class="term-line output">
+              <span class="term-welcome">Welcome to Lucky Raj's Interactive Portfolio CLI v2.4</span>
+            </div>
+            <div class="term-line output">
+              <span class="term-dim">Type <span class="term-cmd-highlight">help</span> to view available commands or select from the shortcuts below.</span>
+            </div>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="term-prompt">
+              <span class="term-user">lucky</span><span class="term-at">@</span><span class="term-host">rajexploit</span>:<span class="term-path">~</span>$
+            </span>
+            <input type="text" id="terminalInput" class="terminal-input" placeholder="type a command (e.g. 'help', 'skills', 'about', 'sudo hire lucky')..." autocomplete="off" spellcheck="false">
+          </div>
+
+          <div class="terminal-shortcuts">
+            <span class="shortcut-label">Shortcuts:</span>
+            <button class="cmd-chip" onclick="executeTermCommand('help')">help</button>
+            <button class="cmd-chip" onclick="executeTermCommand('about')">about</button>
+            <button class="cmd-chip" onclick="executeTermCommand('skills')">skills</button>
+            <button class="cmd-chip" onclick="executeTermCommand('education')">education</button>
+            <button class="cmd-chip" onclick="executeTermCommand('contact')">contact</button>
+            <button class="cmd-chip hire-chip" onclick="executeTermCommand('sudo hire lucky')">sudo hire lucky</button>
+            <button class="cmd-chip" onclick="clearTerminal()">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS TIMELINE -->
+    <section id="education" class="section education-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> ACADEMIC PATH</div>
+          <h2 class="section-title">Education &amp; Credentials</h2>
+          <p class="section-subtitle">
+            Formal coursework, academic qualifications, and specialized training programs.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Entry 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot current-dot">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-badge current">Current Degree (Pursuing)</span>
+                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> 01/2025 &ndash; 01/2028</span>
+              </div>
+              <h3 class="timeline-title">Bachelor of Computer Applications (BCA)</h3>
+              <h4 class="timeline-org"><i class="fa-solid fa-building-columns"></i> SAGE University</h4>
+              <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> Indore, Madhya Pradesh</p>
+              <p class="timeline-desc">
+                Rigorous curriculum emphasizing computer science fundamentals, programming languages (C, Python, Java), database management systems (SQL), computer networks, and modern software development practices.
+              </p>
+              <div class="timeline-tags">
+                <span>Computer Applications</span>
+                <span>Data Structures</span>
+                <span>Software Development</span>
+                <span>Web Technologies</span>
+                <span>Networking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Entry 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-badge completed">Higher Secondary Education</span>
+                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> 01/2023 &ndash; 01/2025</span>
+              </div>
+              <h3 class="timeline-title">Class 12</h3>
+              <h4 class="timeline-org"><i class="fa-solid fa-book-open"></i> Senior Secondary School</h4>
+              <p class="timeline-desc">
+                Advanced secondary schooling with focus on foundational academics, analytical problem solving, and analytical preparation for computer application studies.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Entry 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-badge completed">Secondary Education</span>
+                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> 01/2021 &ndash; 01/2023</span>
+              </div>
+              <h3 class="timeline-title">Class 10</h3>
+              <h4 class="timeline-org"><i class="fa-solid fa-book-open"></i> Secondary School</h4>
+              <p class="timeline-desc">
+                High school matriculation covering mathematics, science, English, and fundamental computer basics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATIONS & WORKSHOPS CARDS -->
+        <div class="cert-workshop-grid">
+          <div class="cert-card">
+            <div class="cert-icon-wrap cisco-glow">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Cisco Networking Academy</span>
+              <h3 class="cert-title">Networking Basics Certification</h3>
+              <p class="cert-desc">
+                Comprehensive training covering network architecture, IP addressing, protocols, LAN switches, routers, and secure connectivity.
+              </p>
+              <div class="cert-footer">
+                <span class="verified-pill"><i class="fa-solid fa-circle-check"></i> Certified Credential</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon-wrap blockchain-glow">
+              <i class="fa-solid fa-cubes"></i>
+            </div>
+            <div class="cert-body">
+              <span class="cert-issuer">Sunstone Training</span>
+              <h3 class="cert-title">Blockchain Workshop</h3>
+              <p class="cert-desc">
+                Specialized intensive workshop covering decentralized ledgers, cryptography, smart contracts overview, and modern distributed systems.
+              </p>
+              <div class="cert-footer">
+                <span class="verified-pill"><i class="fa-solid fa-circle-check"></i> Workshop Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-envelope"></i> GET IN TOUCH</div>
+          <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+          <p class="section-subtitle">
+            Whether you have an internship opportunity, freelance video editing project, or just want to discuss tech, I'm always eager to talk!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Direct Info -->
+          <div class="contact-info-card">
+            <h3 class="contact-card-title">Direct Channels</h3>
+            <p class="contact-card-desc">
+              Fastest ways to reach Lucky Raj. Based in Indore, Madhya Pradesh; open to remote and on-site opportunities.
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-item-content">
+                <span class="item-label">Email Address</span>
+                <a href="mailto:lucky909792@gmail.com" class="item-value">lucky909792@gmail.com</a>
+              </div>
+              <button class="copy-pill-btn" onclick="copyToClipboard('lucky909792@gmail.com', 'Email copied to clipboard!')" title="Copy email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-item-content">
+                <span class="item-label">Phone &amp; WhatsApp</span>
+                <a href="tel:+917870856510" class="item-value">+91 7870856510</a>
+              </div>
+              <button class="copy-pill-btn" onclick="copyToClipboard('+917870856510', 'Phone number copied to clipboard!')" title="Copy phone">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="contact-item-content">
+                <span class="item-label">GitHub Repository</span>
+                <a href="https://github.com/RajExploit" target="_blank" rel="noopener noreferrer" class="item-value">github.com/RajExploit</a>
+              </div>
+              <a href="https://github.com/RajExploit" target="_blank" rel="noopener noreferrer" class="copy-pill-btn" title="Open GitHub">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <div class="contact-item-content">
+                <span class="item-label">Location</span>
+                <span class="item-value">Indore, Madhya Pradesh, India</span>
+              </div>
+            </div>
+
+            <div class="availability-banner">
+              <div class="avail-dot"></div>
+              <div>
+                <strong>Actively Seeking BCA Internships</strong>
+                <p>Software Engineering &bull; Web Development &bull; Video Post-Production</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Interactive Form -->
+          <div class="contact-form-card">
+            <h3 class="contact-card-title">Send a Direct Message</h3>
+            <form id="contactForm" class="contact-form" onsubmit="handleContactSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="userName">Your Name <span class="required">*</span></label>
+                  <input type="text" id="userName" name="name" placeholder="e.g. Aditi Sharma" required>
+                </div>
+                <div class="form-group">
+                  <label for="userEmail">Your Email <span class="required">*</span></label>
+                  <input type="email" id="userEmail" name="email" placeholder="e.g. aditi@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subjectSelect">Inquiry Subject <span class="required">*</span></label>
+                <select id="subjectSelect" name="subject" required>
+                  <option value="" disabled selected>Select a subject...</option>
+                  <option value="Internship Opportunity">💼 BCA Internship / Job Opportunity</option>
+                  <option value="Video Editing Project">🎬 Video Editing / Motion Design Project</option>
+                  <option value="Coding Collaboration">💻 Software / Open Source Collaboration</option>
+                  <option value="General Connect">👋 Just Saying Hello / Networking</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Message <span class="required">*</span></label>
+                <textarea id="userMessage" name="message" rows="5" placeholder="Hi Lucky, I came across your portfolio and would like to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-name">LuckyRaj</span>
+          <span class="logo-tag">/</span>
+          <span class="logo-bracket">&gt;</span>
+        </div>
+        <p class="footer-bio">
+          BCA Student @ SAGE University, Indore &bull; Software Developer &amp; Visual Creator
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#terminal">Terminal</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/RajExploit" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:lucky909792@gmail.com" aria-label="Email Lucky Raj"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+917870856510" aria-label="Call Lucky Raj"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear">2026</span> Lucky Raj. All rights reserved.</p>
+      <p class="made-with">Crafted with modern HTML5, CSS3 &amp; Vanilla JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL VIEWER & PRINTABLE SHEET -->
+  <div id="resumeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+    <div class="modal-backdrop" onclick="closeResumeModal()"></div>
+    <div class="modal-dialog resume-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="resumeTitle"><i class="fa-solid fa-file-invoice"></i> Curriculum Vitae &bull; Lucky Raj</h3>
+          <span class="modal-subtitle">Official verified resume document</span>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary btn-sm" onclick="printResume()">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+          <button class="close-modal-btn" onclick="closeResumeModal()" aria-label="Close resume">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-paper" id="resumePrintArea">
+          <!-- RESUME HEADER -->
+          <div class="cv-header">
+            <div class="cv-name-wrap">
+              <h1 class="cv-name">LUCKY RAJ</h1>
+              <div class="cv-contact-bar">
+                <span><i class="fa-solid fa-phone"></i> +91 7870856510</span>
+                <span><i class="fa-solid fa-envelope"></i> lucky909792@gmail.com</span>
+                <span><i class="fa-brands fa-github"></i> github.com/RajExploit</span>
+                <span><i class="fa-solid fa-location-dot"></i> Indore, Madhya Pradesh</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RESUME MAIN BODY TWO-COLUMN -->
+          <div class="cv-columns">
+            <div class="cv-left-col">
+              <!-- EDUCATION -->
+              <div class="cv-section">
+                <h2 class="cv-sec-title">EDUCATION</h2>
+                <div class="cv-item">
+                  <div class="cv-item-title">Bachelor of Computer Applications (BCA)</div>
+                  <div class="cv-item-org">SAGE University</div>
+                  <div class="cv-item-meta">01/2025 &ndash; 01/2028 | Indore, Madhya Pradesh</div>
+                </div>
+                <div class="cv-item">
+                  <div class="cv-item-title">Class 12</div>
+                  <div class="cv-item-meta">01/2023 &ndash; 01/2025</div>
+                </div>
+                <div class="cv-item">
+                  <div class="cv-item-title">Class 10</div>
+                  <div class="cv-item-meta">01/2021 &ndash; 01/2023</div>
+                </div>
+              </div>
+
+              <!-- PROJECTS -->
+              <div class="cv-section">
+                <h2 class="cv-sec-title">PROJECTS</h2>
+                <div class="cv-item">
+                  <div class="cv-item-title">Programming Practice</div>
+                  <div class="cv-item-meta">Present</div>
+                  <p class="cv-item-desc">
+                    Hands-on experience enhancing programming skills and understanding of software development.
+                  </p>
+                  <ul class="cv-bullet-list">
+                    <li>Practicing C, Python, Java, SQL and web development fundamentals through academic and personal exercises.</li>
+                  </ul>
+                </div>
+
+                <div class="cv-item">
+                  <div class="cv-item-title">Video Editing &amp; Digital Content</div>
+                  <div class="cv-item-meta">Present</div>
+                  <p class="cv-item-desc">
+                    Experience in video editing and digital content creation tools.
+                  </p>
+                  <ul class="cv-bullet-list">
+                    <li>Hands-on practice with Adobe Premiere Pro, After Effects, DaVinci Resolve and CapCut for digital content creation.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="cv-right-col">
+              <!-- SUMMARY -->
+              <div class="cv-section">
+                <h2 class="cv-sec-title">SUMMARY</h2>
+                <p class="cv-summary-text">
+                  BCA student at SAGE University, Indore, interested in software development, programming, web technologies, networking and digital content creation. Focused on building practical skills through coding practice, coursework and hands-on learning. Looking for an opportunity to learn, contribute and grow in a professional environment.
+                </p>
+              </div>
+
+              <!-- TRAINING / COURSES -->
+              <div class="cv-section">
+                <h2 class="cv-sec-title">TRAINING / COURSES</h2>
+                <div class="cv-item">
+                  <div class="cv-item-title">Blockchain workshop</div>
+                  <div class="cv-item-meta">Sunstone</div>
+                </div>
+              </div>
+
+              <!-- LANGUAGES -->
+              <div class="cv-section">
+                <h2 class="cv-sec-title">LANGUAGES</h2>
+                <div class="cv-lang-row">
+                  <strong>English:</strong> Advanced
+                </div>
+                <div class="cv-lang-row">
+                  <strong>Hindi:</strong> Advanced
+                </div>
+              </div>
+
+              <!-- SKILLS -->
+              <div class="cv-section">
+                <h2 class="cv-sec-title">SKILLS</h2>
+                <div class="cv-skills-pills">
+                  <span>C Programming</span>
+                  <span>Python</span>
+                  <span>Java</span>
+                  <span>HTML &amp; CSS</span>
+                  <span>JavaScript</span>
+                  <span>SQL</span>
+                  <span>Networking Basics</span>
+                  <span>VS Code</span>
+                  <span>Adobe Premiere Pro</span>
+                  <span>After Effects</span>
+                  <span>DaVinci Resolve</span>
+                  <span>CapCut</span>
+                </div>
+              </div>
+
+              <!-- CERTIFICATIONS -->
+              <div class="cv-section">
+                <h2 class="cv-sec-title">CERTIFICATIONS</h2>
+                <div class="cv-item">
+                  <div class="cv-item-title">Networking Basics</div>
+                  <div class="cv-item-meta">Cisco Networking Academy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GENERIC PROJECT DETAILS MODAL -->
+  <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-backdrop" onclick="closeProjectModal()"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalProjectTitle">Project Breakdown</h3>
+        <button class="close-modal-btn" onclick="closeProjectModal()" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="projectModalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
